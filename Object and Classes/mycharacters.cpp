@@ -7,6 +7,19 @@ Date: 08/09/2022
 
 */
 
+/*
+
+Computer games often contain different characters or creatures. For example, 
+you might design a game in which alien beings possess specific characteristics 
+such as color, number of eyes, or number of lives. Design a character for a game, 
+creating a class to hold at least three attributes for each character. Include methods 
+to get and set each of the character’s attributes. Then write an application in which 
+you create at least two characters each of which has a random age up to 100, a random 
+number of eyes up to 10, and a random number of legs, up to 12. In turn, pass each 
+character to a display method that displays the character’s attributes
+
+*/
+
 #include <iostream>
 //menggunakan library
 #include <stdlib.h>
