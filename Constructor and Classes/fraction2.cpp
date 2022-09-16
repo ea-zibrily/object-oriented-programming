@@ -34,27 +34,21 @@ works correctly.
 #include "fraction.h"
 using namespace std;
 
-//constructor untuk bilangan numerator dan denominator
-void fraction::enterdoubleValue()
+// constructor untuk bilangan numerator dan denominator
+void fraction::enterdoubleValue(int num, int denom)
 {
-    cout << "Enter a numerator number: ";
-    cin >> bilPembilang;
-
-    cout << "Enter a denominator number: ";
-    cin >> bilPenyebut;
-
-    if (bilPenyebut == NULL)
+    if (num == NULL)
     {
-        bilPenyebut = 1;
+        num = 1;
     }
-    else if ((bilPembilang == NULL) && (bilPenyebut == NULL))
+    else if ((num == NULL) && (denom == NULL))
     {
-        bilPembilang = 0;
-        bilPenyebut = 1;
+        num = 0;
+        denom = 1;
     }
-    else if (bilPenyebut == 0)
+    else if (denom == 0)
     {
-        bilPenyebut = 1;
+        denom = 1;
     }
 
     /*
@@ -66,25 +60,29 @@ void fraction::enterdoubleValue()
     */
 }
 
+void fraction::entertripleValue(int denom)
+{
+    while (denom == 0)
+    {
+        cout << "Enter a denominator number: ";
+        cin >> bilPenyebut;
+    }
+}
+
 void fraction::enterFractionValue()
 {
     cout << "Enter a whole number: ";
     cin >> bilBulat;
 
-    /*
-        cout << "Enter a numerator number:: ";
-        cin >> bilPembilang;
+    cout << "Enter a numerator number:: ";
+    cin >> bilPembilang;
 
-        cout << "Enter a denominator number: ";
-        cin >> bilPenyebut;
-    */
-    enterdoubleValue();
+    cout << "Enter a denominator number: ";
+    cin >> bilPenyebut;
 
-    while (bilPenyebut == 0)
-    {
-        cout << "Enter a denominator number: ";
-        cin >> bilPenyebut;
-    }
+    enterdoubleValue(bilPembilang, bilPenyebut);
+
+    entertripleValue(bilPenyebut);
 }
 
 void fraction::reduceFraction()
@@ -112,11 +110,15 @@ void fraction::displayFraction()
 int main()
 {
     fraction myFraction;
+    
+    cout << "Fraction Number Program" << endl;
+    cout << "=============================" << endl;
 
     myFraction.enterFractionValue();
     myFraction.reduceFraction();
 
     cout << endl;
+    cout << "Reduce Processing" << endl;
     myFraction.displayFraction();
 
     return 0;
