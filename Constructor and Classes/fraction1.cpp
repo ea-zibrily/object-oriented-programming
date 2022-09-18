@@ -30,7 +30,7 @@ sederhanakan pecahan dan tampilkan pecahan lagi.
 */
 
 #include <iostream>
-#include "fraction.h" //memanggil header
+#include "fraction1.h" //memanggil header
 using namespace std;
 
 

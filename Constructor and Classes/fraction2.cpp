@@ -3,7 +3,7 @@
 Code: Fraction Number
 File: fraction.cpp
 Programmer: Zibrilyy | SHINONNN
-Date: 15/09/2022
+Date: 18/09/2022
 
 */
 
@@ -31,58 +31,25 @@ works correctly.
 */
 
 #include <iostream>
-#include "fraction.h"
+#include "fraction2.h"
 using namespace std;
-
-// constructor untuk bilangan numerator dan denominator
-void fraction::enterdoubleValue(int num, int denom)
-{
-    if (num == NULL)
-    {
-        num = 1;
-    }
-    else if ((num == NULL) && (denom == NULL))
-    {
-        num = 0;
-        denom = 1;
-    }
-    else if (denom == 0)
-    {
-        denom = 1;
-    }
-
-    /*
-    Jika satu bilangan bulat diteruskan ke konstruktor, gunakan itu sebagai pembilang,
-    dan gunakan nilai default 1 untuk penyebutnya. Jika tidak ada nilai yang diteruskan
-    ke konstruktor, gunakan nilai default 0 untuk pembilang dan 1 untuk penyebut. Ketika
-    Pecahan apa pun dibangun dengan argumen 0 untuk penyebut, paksa nilai penyebut menjadi 1.
-
-    */
-}
-
-void fraction::entertripleValue(int denom)
-{
-    while (denom == 0)
-    {
-        cout << "Enter a denominator number: ";
-        cin >> bilPenyebut;
-    }
-}
 
 void fraction::enterFractionValue()
 {
     cout << "Enter a whole number: ";
     cin >> bilBulat;
 
-    cout << "Enter a numerator number:: ";
+    cout << "Enter a numerator number: ";
     cin >> bilPembilang;
 
     cout << "Enter a denominator number: ";
     cin >> bilPenyebut;
 
-    enterdoubleValue(bilPembilang, bilPenyebut);
-
-    entertripleValue(bilPenyebut);
+    while (bilPenyebut == 0)
+    {
+        cout << "Enter a denominator number: ";
+        cin >> bilPenyebut;
+    }
 }
 
 void fraction::reduceFraction()
@@ -107,19 +74,47 @@ void fraction::displayFraction()
     cout << bilBulat << " " << bilPembilang << "/" << bilPenyebut << endl;
 }
 
+void fraction::displayOriginal()
+{
+    cout << "The Original Number is: ";
+    cout << bilBulat << " " << bilPembilang << "/" << bilPenyebut << endl;
+}
+
 int main()
 {
-    fraction myFraction;
-    
     cout << "Fraction Number Program" << endl;
     cout << "=============================" << endl;
 
-    myFraction.enterFractionValue();
-    myFraction.reduceFraction();
+    fraction defaultFraction;
+    cout << "Input NULL Number!" << endl;
+    defaultFraction.reduceFraction();
+    defaultFraction.displayFraction();
 
     cout << endl;
-    cout << "Reduce Processing" << endl;
-    myFraction.displayFraction();
+
+    fraction singleFraction(18);
+    cout << "Input Single Number!" << endl;
+    singleFraction.displayOriginal();
+    singleFraction.reduceFraction();
+    singleFraction.displayFraction();
+
+    cout << endl;
+
+    fraction doubleFraction(18, 4);
+    cout << "Input Double Number!" << endl;
+    doubleFraction.displayOriginal();
+    doubleFraction.reduceFraction();
+    doubleFraction.displayFraction();
+
+    cout << endl;
+
+    fraction tripleFraction(4, 18, 4);
+    cout << "Input Triple Number!" << endl;
+    tripleFraction.displayOriginal();
+    tripleFraction.reduceFraction();
+    tripleFraction.displayFraction();
+
+    cout << endl;
 
     return 0;
 }
