@@ -14,7 +14,6 @@
  number of legs, up to 12. In turn, pass each character to a display method that displays
  the character’s attributes. Save the program as MyCharacters.cpp */
 
-
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -23,7 +22,8 @@
 using namespace std;
 
 // declaration
-class Alien {
+class Alien
+{
 private:
 	string color;
 	int legs;
@@ -43,50 +43,58 @@ public:
 };
 
 // implementation
-string Alien::getColor(){
+string Alien::getColor()
+{
 	return color;
 }
 
-void Alien::setColor(string new_color){
+void Alien::setColor(string new_color)
+{
 	color = new_color;
 }
 
-int Alien::getLegs(){
+int Alien::getLegs()
+{
 	return legs;
 }
 
-void Alien::setLegs(int new_legs){
+void Alien::setLegs(int new_legs)
+{
 	legs = rand() % new_legs;
-
 }
 
-int Alien::getEyes(){
+int Alien::getEyes()
+{
 	return eyes;
 }
 
-void Alien::setEyes(int new_eyes){
+void Alien::setEyes(int new_eyes)
+{
 	eyes = rand() % new_eyes;
 }
 
-int Alien::getAge(){
+int Alien::getAge()
+{
 	return age;
 }
 
-void Alien::setAge(int new_age){
+void Alien::setAge(int new_age)
+{
 	age = rand() % new_age;
 }
 
-void Alien::DisplayAlien(){
+void Alien::DisplayAlien()
+{
 	cout << "Age: " << getAge() << endl;
 	cout << "Legs: " << getLegs() << endl;
 	cout << "Eyes: " << getEyes() << endl;
 	cout << "Color: " << getColor() << endl;
-
 }
 
 // main
-int main(){
-	srand((unsigned) time(NULL));
+int main()
+{
+	srand((unsigned)time(NULL));
 	// first Alien
 	cout << "Creating a new Alien 'first'" << endl;
 	Alien first;
@@ -114,18 +122,16 @@ int main(){
 	cout << "Setting second Alien eyes." << endl;
 	second.setEyes(10);
 
-
 	// spacing
 	cout << endl;
 
-	//printing information
+	// printing information
 	cout << " First Alien information:" << endl;
 	first.DisplayAlien();
 	// spacing
 	cout << endl;
 
-	//printing information
+	// printing information
 	cout << " Second Alien information:" << endl;
 	second.DisplayAlien();
-
 }
