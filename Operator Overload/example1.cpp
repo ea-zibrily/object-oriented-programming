@@ -1,7 +1,7 @@
 /*
 
-Code: Overloaded Operator Example
-File: example.cpp
+Code: Overloaded Operator Example 1 - Arhitmetic Operator
+File: example1.cpp
 Programmer: Zibrilyy | SHINONNN
 Date: 29/09/2022
 
@@ -9,13 +9,13 @@ Date: 29/09/2022
 
 /*
 
-Mencoba konsep Operator Overloaded
+Mencoba konsep Operator Overloaded menggunakan Arhitmetic Operator
 
 */
 
 #include <iostream>
 #include <string.h>
-#include "example.h"
+#include "example1.h"
 using namespace std;
 
 salesOffice::salesOffice(string office, double salesAmt)
@@ -41,5 +41,8 @@ int main()
     ratio = north / south;
     cout << "The North Office has " << (ratio * 100) << "% "
          << "of the sales of South Office" << endl;
+    
+    cout << endl;
+
     return 0;
 }

@@ -1,0 +1,2 @@
+
+        number[i] = randNum;
