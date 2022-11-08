@@ -1,7 +1,48 @@
+/*
+
+Code: Template 1 Practice
+File: distance.cpp
+Programmer: Zibrilyy | SHINONNN
+Date: 06/11/2022
+
+*/
+
+/*
+
+Create a function template named circleArea(). The function receives a
+parameterized argument representing the radius of a circle, and returns a double
+representing the circle’s area. (The area is computed as 3.14 multiplied by the radius
+squared.) Write a main() function that demonstrates that the function works correctly
+with either an integer or a double argument. Save the file as CircleArea.cpp.
+
+Complete the following tasks:
+a. Create a calcDistance()function template that accepts two parameters
+representing two distances from a given point. The function returns the total distance
+as an integer.
+
+b. Create a City class with fields for the city name and for the distance from Chicago,
+the hub city for Amalgamated Airlines. Overload the + operator to sum the distances
+to produce a City result in which the city name contains the two operand city names
+(for example, “New York to Los Angeles”) and the distance contains the total
+distance.
+
+c. Create a Planet class with fields for the planet name and distance from Earth, the
+hub planet for the new Amalgamated Galactic Travel Corporation. Overload the +
+operator to sum the distances to produce a Planet result in which the planet name
+contains the two operand planet names (for example, “Venus to Mars”) and the
+distance contains the total distance.
+
+d. Write a main()function that declares several integer, double, and City and
+Planet objects, and uses the calcDistance()function to compute the distance
+for several pairs. Save the file as Distance.cpp.
+*/
+
 #include <iostream>
 #include <string.h>
 using namespace std;
 
+
+// membuat func display city dan planet
 void displayCity(string name, int dist)
 {
     cout << "City Name is " << name << endl;
@@ -25,6 +66,7 @@ T calcDistance(T distA, T distB)
     return distTotal;
 }
 
+// template class city
 template <class T>
 class city
 {
@@ -55,6 +97,7 @@ T city<T>::operator+(city cityTarget)
     return ratio;
 }
 
+// template class planet
 template <class T>
 class planet
 {
@@ -86,7 +129,7 @@ T planet<T>::operator+(planet planetTarget)
 
 int main()
 {
-    // deklarasi variabel yang akan digunakan
+    // deklarasi variabel
     int city1Dist, city2Dist, calculate;
     double planet1Dist, planet2Dist, calculateF;
     string city1Name, city2Name, planet1Name, planet2Name;

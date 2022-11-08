@@ -28,12 +28,14 @@ T getMax(T a, U b)
 
 int main()
 {
+    // deklarasi variabel
     int i, j;
     long l;
 
     j = 6;
     l = 10;
 
+    // memanggil template func
     i = getMax<int>(j, l);
     cout << "getMax number is " << i << endl;
 

@@ -13,7 +13,6 @@ Mencoba konsep Template dengan menggunakan constructor
 
 */
 
-
 #include <iostream>
 using namespace std;
 
@@ -30,15 +29,15 @@ public:
         value[0] = first;
         cout << "first number is " << value[0] << endl;
         value[1] = second;
-         cout << "second number is " << value[1] << endl;
+        cout << "second number is " << value[1] << endl;
     }
 };
 
 int main()
 {
+    // memanggil template class contructor
     myPair<int> myObject(115, 36);
     myPair<float> myFloat(3.0, 2.18);
-    
 
     return 0;
 }

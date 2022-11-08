@@ -1,7 +1,7 @@
 /*
 
 Code: Template 1 Example
-File: exc3.cpp
+File: exc4.cpp
 Programmer: Zibrilyy | SHINONNN
 Date: 06/11/2022
 
@@ -51,6 +51,7 @@ T myPair<T>::getMax()
 
 int main()
 {
+    // memanggil template class contructor
     myPair<int> myObject(115, 36);
     cout << "getMax number is " << myObject.getMax() << endl;
 
