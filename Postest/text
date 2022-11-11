@@ -1,0 +1,5 @@
+Buatlah kelas dengan nama BasicTicket yang menyimpan nama penumpang, kota keberangkatan,kota kedatangan, nomor penerbangan, dan harga tiket.
+Tulis konstruktor untuk mengeset atribut tersebut dan sertakan fungsi getPrice() yang mengembalikan harga tiket.
+Buat kelas turunan dengan nama PremiumTicket yang mewarisi semua detail dari BasicTicket dan menyimpan nomor kursi penumpang. Harga untuk PremiumTicket 10% lebih mahal dari harga BasicTicket. 
+Buat fungsi yang meng-overide getPrice() di PremiumTicket untuk mengembalikan harga PremiumTicket dengan menaikkan harga tiket basic dengan 10%.
+Buat fungsi utama (main) untuk membuat objek BasicTicket dan PremiumTicket dan mencetak harga keduanya.

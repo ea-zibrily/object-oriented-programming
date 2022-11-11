@@ -122,7 +122,7 @@ int main()
 {
     // limit jarak mobil
     const int milesLimit = 500;
-    int carSpeed = 200;
+    int carSpeed = 200; 
     srand((unsigned)time(NULL));
 
     // deklarasi variabel class
