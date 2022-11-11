@@ -152,30 +152,3 @@ int main()
 
     return 0;
 }
-
-/*
-Buat sebuah program yang berisikan sebuah vector dari pointer obyek BasicTicket.
-Buat beberapa obyek dari BasicTicket dan PremiumTicket dan tambahkan kedalam vector.
-Tulis program untuk menampilkan total harga tiket seluruh oyek yang ada di vektor tersebut.
-Modifikasi program BasicTicket/PremiumTicket  jika diperlukan
-
-
-exc
-
-shape *p;
-    circle C1(5);
-    rectangle R1(4,6);
-
-    p = &C1;
-    C1.displayCirc();
-    p->calculateArea();
-    p->display();
-
-    cout << endl;
-    cout << endl;
-
-    p = &R1;
-    R1.displayRect();
-    p->calculateArea();
-    p->display();
-*/
